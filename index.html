@@ -10,6 +10,22 @@
   <!-- <script src="introduction/basic.js"></script>
   <script src="types/types.js"></script>
   <script src="compilator/compilator.js"></script> -->
+  <script src="node_modules/systemjs/dist/system.js"></script>
   <script src="Desafio - S04/challenge.js"></script>
+  <script src="namespaces/namespaces.js"></script>
+  <!-- <script src="modulos/modulos.js"></script> -->
+
+  <script>
+    SystemJS.config({
+      baseUrl: './modulos',
+      packages: {
+        '/modulos':{
+          defaultJSExtension: true 
+        }
+      }
+    })
+
+    SystemJS.import('./modulos/modulos.js')
+  </script>
 </body>
 </html>
